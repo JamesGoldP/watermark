@@ -1,6 +1,6 @@
 <?php
 /**
- * @author JamesGold
+ * @author Jimmy
  * @version 1.0
  *
  */
@@ -13,7 +13,6 @@ class WaterMark{
 	public function __construct($src){
 		$this->info = $this->load_image($src);
 	}
-
 
 	/**
 	 * 加载图片创建临时图像
@@ -42,7 +41,6 @@ class WaterMark{
 		$this->info['image'] = $thumb_image;
 	}
 
-
 	/**
 	 * 添加水印
 	 * @$dst_im  水印图
@@ -52,7 +50,6 @@ class WaterMark{
 		imagecopymerge($this->info['image'],$water_info['image'],0,0,0,0,$water_info['width'],$water_info['height'],30);
 		imagedestroy($water_info['image']);
 	}
-
 
 	/**
 	 * 添加文字水印
@@ -81,6 +78,4 @@ class WaterMark{
 	}
 
 }
-
-
 ?>
